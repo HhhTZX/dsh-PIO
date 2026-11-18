@@ -14,6 +14,7 @@ DeepSeek Harness（DSH）的插件。
 ### DSH 命令从 GitHub 安装
 ```bash
 dsh plugin add github:HhhTZX/dsh-PIO
+
 ## 使用方法
 
 1. 输入框输入 `/pio` 回车，输入 `/` 时补全列表可以看到 pio
