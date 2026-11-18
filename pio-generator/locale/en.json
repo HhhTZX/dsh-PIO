@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "PIO project generator",
+    "description": "Type /pio in the composer and press Enter: the form renders inside that command row (the Plugins settings tab stays as a backup entry). Enter a board or chip name, choose an operating system and a flashing method, and optionally a framework (Arduino, vendor HAL, bare-metal SDK), then get a copy-ready platformio.ini (with China download notes), a blink example, and a one-click script for that system. Over 30 common PlatformIO boards produce a standard project; less common parts such as CH32 or GD32 fall back to a generic template whose every uncertain line is marked as needing review, and an unsupported framework is reported and replaced instead of silently producing a broken config. When the input is too thin it asks for core, vendor and flash size instead of guessing. The plugin only renders text: it does not scan serial ports, read hardware, or run local commands, and you save and run the script yourself."
+  }
+}

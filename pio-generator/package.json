@@ -1,0 +1,50 @@
+{
+  "name": "pio-generator",
+  "version": "1.0.1",
+  "type": "module",
+  "description": "DSH 插件：对话里输入 /pio，填芯片 / 系统 / 烧录方式 / 开发框架，当场生成 PlatformIO 工程（platformio.ini + 点灯源码 + 一键脚本）。纯前端生成，不扫描串口、不读取硬件、不运行任何本地命令。",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "platformio",
+    "embedded",
+    "arduino",
+    "stm32",
+    "esp32",
+    "单片机"
+  ],
+  "license": "MIT",
+  "engines": {
+    "dsh": ">=0.2.2-rc.3"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/engine.test.mjs"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings-plugins"
+      ]
+    }
+  }
+}
